@@ -1,0 +1,57 @@
+<%- include('header') -%>
+<main>
+    <div class="videos">
+        <div class="videos__thumbnail">
+            <video controls poster="<%= content.poster %>">
+                <source src="<%= content.video %>" type="video/mp4">
+              </video>
+        </div>
+        <div class="videos__row--title">
+            <p><%= content.description%></p>
+        </div>
+        <% if(Object.entries(content.related).length > 0){ %>
+            <div class="videos__container">
+                <div class="videos__title">
+                    <h2>
+                        Tengd myndbönd
+                    </h2>
+                </div>
+                <div class="videos__row">
+                    <% content.related.forEach(function(data){ %>
+                            <% videos.forEach(function(vid){ %>
+                                    <% if(vid.id ===data){ %>
+                                            <div class="videos__row--item">
+                                                <div class="videos__thumbnail">
+                                                    <a href="/<%= vid.id %>">
+                                                        <img src="<%= vid.poster %>" class="videos__row--img">
+                                                    </a>
+                                                    <div class="videos__timestamp">
+                                                        <small><%= helper.timestamp(vid.duration)%></small>
+                                                    </div>
+                                                </div>
+                                                <div class="videos__row--title">
+                                                    <h3>
+                                                        <b> <%= vid.title %> </b>
+                                                    </h3>
+                                                </div>
+                                                <div class="videos__row--creationDate">
+                                                    <strong><%= helper.creationDate(vid.created) %></strong>
+                                                </div>
+                                        </div>
+                                    <% } %>
+                            <% }); %>
+                    <% }); %>
+                </div>
+            </div>
+       <% } %>
+    </div>
+</main>
+<footer> 
+    <p>
+        <a href="/">
+            Tilbaka
+        </a>
+    </p> 
+</footer> 
+
+<%- include('footer') -%>

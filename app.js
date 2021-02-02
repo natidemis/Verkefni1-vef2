@@ -27,7 +27,7 @@ app.use('/',videos);
 
 function notFoundHandler(req,res,next){
     const message = "Ó nei, efni finnst ekki";
-    const title ="Fannst Ekki";
+    const title ="404";
     res.status(404).render('error',{title, message});
 
 }

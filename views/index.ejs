@@ -6,14 +6,19 @@
             <div class="videos__container">
                 <div class="videos__title">
                     <h2>
-                        <%= item.title %>
+                        <%= item.title %> 
                     </h2>
                 </div>
                 <div class="videos__row">
                      <% item.videos.forEach(function(data) { %>
                          <div class="videos__row--item" class="<%= data.id%>">
                              <div class="videos__thumbnail">
-                                 <img src="<%= data.poster %>" class="videos__row--img"> 
+                                <a href="/<%= data.id %>">
+                                    <img src="<%= data.poster %>" class="videos__row--img"> 
+                                </a>
+                                 <div class="videos__timestamp">
+                                     <small><%= helper.timestamp(data.duration)%></small>
+                                 </div>
                              </div>
                              <div class="videos__row--title">
                                 <h3>
@@ -30,5 +35,9 @@
         <% }) %> 
     </div>
 </main>
-
+<footer> 
+    <small>
+        &copy; Fræðslumyndbandaleigan
+    </small> 
+</footer> 
 <%- include('footer') -%>
