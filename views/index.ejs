@@ -1,0 +1,29 @@
+
+<%- include('header') -%>
+
+<main>
+  <section class="videos">
+    
+
+    <div class="videos_content">
+      <div class="videos__row">
+        <div class="videos__col">
+            <% mapped.forEach(function(item) { %>
+                <h3>
+                    <%= item.title %>
+                </h3>
+                <% item.videos.forEach(function(data) { %>
+                    <img src="<%= data.poster %>" alt="" class="videos__img">
+               <% }); %>
+           <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <footer class="videose__footer">
+      <a class="videos__back" href="/">Til baka</a>
+    </footer>
+  </section>
+</main>
+
+<%- include('footer') -%>
