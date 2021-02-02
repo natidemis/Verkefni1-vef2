@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Lora', georgia, serif;
+  font-size: 16px;
+  background-color: white;
+  color: #333; }
+
+h1,
+h2,
+h3 {
+  font-family: Roboto, helvetica, arial, sans-serif;
+  font-weight: bold; }
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: auto; }
+
+.header {
+  display: flex;
+  margin-bottom: 30px;
+  min-height: 300px;
+  background-image: url(./styles/headerIMG.jpg);
+  background-size: cover;
+  background-position: 50% 50%; }
+
+.header__title {
+  margin: auto;
+  color: #eee;
+  font-size: 4rem; }
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  margin: 10px;
+  overflow: auto; }
+  .videos__title {
+    text-align: center; }
+  .videos__container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: lightcyan;
+    overflow: auto; }
+  .videos__row {
+    background-color: lightcyan;
+    margin: 10px;
+    display: flex;
+    flex-direction: column; }
+    .videos__row--img {
+      width: 100%;
+      object-fit: fit; }
+    .videos__row--title {
+      background-color: lightblue;
+      margin-bottom: 2px; }
+    .videos__row--creationDate {
+      background-color: lightblue; }
+    .videos__row--item {
+      display: flex;
+      flex-direction: column;
+      background-color: lightcyan;
+      width: 100%;
+      height: auto;
+      flex: 1 0 30%;
+      padding: 10px;
+      margin-bottom: 0px; }
+
+@media (min-width: 600px) {
+  .videos__row {
+    flex-direction: row;
+    flex-wrap: wrap; } }
+
+/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAicHVibGljL21haW4uY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJwdWJsaWMvc3R5bGVzL21haW4uc2NzcyIKCV0sCgkibmFtZXMiOiBbXSwKCSJtYXBwaW5ncyI6ICJBQUNBLEFBQUEsQ0FBQyxDQUFDO0VBQ0UsTUFBTSxFQUFFLENBQUM7RUFDVCxPQUFPLEVBQUUsQ0FBQyxHQUNYOztBQUVELEFBQUEsSUFBSSxDQUFDO0VBQ0gsVUFBVSxFQUFFLFVBQVUsR0FDdkI7O0FBRUQsQUFBQSxDQUFDO0FBQ0QsQ0FBQyxBQUFBLFFBQVE7QUFDVCxDQUFDLEFBQUEsT0FBTyxDQUFDO0VBQ1AsVUFBVSxFQUFFLE9BQU8sR0FDcEI7O0FBRUQsQUFBQSxJQUFJLENBQUM7RUFDSCxXQUFXLEVBQUUsc0JBQXNCO0VBQ25DLFNBQVMsRUFBRSxJQUFJO0VBRWYsZ0JBQWdCLEVBQUUsS0FBSztFQUN2QixLQUFLLEVBQUUsSUFBSSxHQUNaOztBQUVILEFBQUEsRUFBRTtBQUNGLEVBQUU7QUFDRixFQUFFLENBQUM7RUFDRCxXQUFXLEVBQUUsb0NBQW9DO0VBQ2pELFdBQVcsRUFBRSxJQUFJLEdBQ2xCOztBQUdELEFBQUEsSUFBSSxDQUFDO0VBQ0QsS0FBSyxFQUFFLElBQUk7RUFDWCxTQUFTLEVBQUUsTUFBTTtFQUNqQixNQUFNLEVBQUUsTUFBTTtFQUNkLFFBQVEsRUFBRSxJQUFJLEdBQ2Y7O0FBRUgsQUFBQSxPQUFPLENBQUM7RUFDTixPQUFPLEVBQUUsSUFBSTtFQUNiLGFBQWEsRUFBRSxJQUFJO0VBQ25CLFVBQVUsRUFBRSxLQUFLO0VBRWpCLGdCQUFnQixFQUFFLDJCQUEyQjtFQUM3QyxlQUFlLEVBQUUsS0FBSztFQUN0QixtQkFBbUIsRUFBRSxPQUFPLEdBQzdCOztBQUVELEFBQUEsY0FBYyxDQUFDO0VBQ1gsTUFBTSxFQUFFLElBQUk7RUFDWixLQUFLLEVBQUUsSUFBSTtFQUNYLFNBQVMsRUFBRSxJQUFJLEdBQ2hCOztBQUVELEFBQUEsT0FBTyxDQUFDO0VBQ04sT0FBTyxFQUFFLElBQUk7RUFDYixjQUFjLEVBQUUsTUFBTTtFQUN0QixnQkFBZ0IsRUFBRSxTQUFTO0VBQzNCLE1BQU0sRUFBRSxJQUFJO0VBQ1osUUFBUSxFQUFFLElBQUksR0F5Q2Y7RUF4Q0UsQUFBRCxjQUFRLENBQUE7SUFDTixVQUFVLEVBQUUsTUFBTSxHQUNuQjtFQUNBLEFBQUQsa0JBQVksQ0FBQTtJQUNWLE9BQU8sRUFBRSxJQUFJO0lBQ2IsY0FBYyxFQUFFLE1BQU07SUFDdEIsTUFBTSxFQUFFLElBQUk7SUFDWixnQkFBZ0IsRUFBRSxTQUFTO0lBQzNCLFFBQVEsRUFBRSxJQUFJLEdBQ2Y7RUFFQSxBQUFELFlBQU0sQ0FBQTtJQUNKLGdCQUFnQixFQUFFLFNBQVM7SUFDM0IsTUFBTSxFQUFFLElBQUk7SUFDWixPQUFPLEVBQUUsSUFBSTtJQUNiLGNBQWMsRUFBRSxNQUFNLEdBdUJ2QjtJQXRCRSxBQUFELGlCQUFNLENBQUE7TUFDSixLQUFLLEVBQUUsSUFBSTtNQUNYLFVBQVUsRUFBRSxHQUFHLEdBQ2hCO0lBQ0EsQUFBRCxtQkFBUSxDQUFBO01BQ04sZ0JBQWdCLEVBQUUsU0FBUztNQUMzQixhQUFhLEVBQUUsR0FBRyxHQUNuQjtJQUNBLEFBQUQsMEJBQWUsQ0FBQTtNQUNiLGdCQUFnQixFQUFFLFNBQVMsR0FDNUI7SUFFQSxBQUFELGtCQUFPLENBQUE7TUFDTCxPQUFPLEVBQUUsSUFBSTtNQUNiLGNBQWMsRUFBRSxNQUFNO01BQ3RCLGdCQUFnQixFQUFFLFNBQVM7TUFDM0IsS0FBSyxFQUFFLElBQUk7TUFDWCxNQUFNLEVBQUUsSUFBSTtNQUNaLElBQUksRUFBRSxPQUFPO01BQ2IsT0FBTyxFQUFFLElBQUk7TUFDYixhQUFhLEVBQUUsR0FBRyxHQUNuQjs7QUFLTCxNQUFNLEVBQUMsU0FBUyxFQUFFLEtBQUs7RUFDckIsQUFBQSxZQUFZLENBQUE7SUFDVixjQUFjLEVBQUUsR0FBRztJQUNuQixTQUFTLEVBQUUsSUFBSSxHQUNoQiIKfQ== */

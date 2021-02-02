@@ -3,6 +3,7 @@ const fs = require('fs');
 const util = require('util');
 const readFileAsync = util.promisify(fs.readFile);
 const router = express.Router();
+const helper = require('./helper');
 
 
 /**
@@ -43,7 +44,7 @@ async function videoList(req,res){
         }
         mapped.push(result)
     } )
-    res.render('index',{title,mapped});
+    res.render('index',{title,mapped,helper});
 }
 
 async function videos(req,res,next){
