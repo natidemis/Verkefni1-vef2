@@ -123,6 +123,10 @@ main {
     margin-bottom: 0;
     padding: 10px;
     width: 100%;
+
+    @media (min-width: $max-width / 2) {
+      max-width: $max-cell-width;
+    }
   }
 
   &__row {

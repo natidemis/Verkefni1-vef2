@@ -43,7 +43,9 @@ async function videoList(req, res) {
     };
     mapped.push(result);
   });
-  res.render('index', { title, mapped, helper });
+  res.render('index', {
+    title, mapped, helper, showBackButton: false,
+  });
 }
 
 async function videoContent(req, res, next) {
@@ -59,7 +61,7 @@ async function videoContent(req, res, next) {
 
   const { title } = foundVideos;
   return res.render('content', {
-    title, content: foundVideos, videos: json.videos, helper,
+    title, content: foundVideos, videos: json.videos, helper, showBackButton: true,
   });
 }
 
